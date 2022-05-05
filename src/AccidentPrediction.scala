@@ -19,7 +19,7 @@ object Accident{
       .config("spark.master", "local[2]")
       .getOrCreate();
     val sc = spark.sparkContext
-    val filePath = "C:\\Users\\16786\\IdeaProjects\\BigDataHW\\data\\US_Accidents_Dec20_updated_out.csv"
+    val filePath = "C:\\Users\\IdeaProjects\\BigDataHW\\data\\US_Accidents_Dec20_updated_out.csv"
     val df =spark.read.format("csv").option("header","true")
       .option("nullValue","null").option("treatEmptyValuesAsNulls,","true").load(filePath)
     print(df.show())
